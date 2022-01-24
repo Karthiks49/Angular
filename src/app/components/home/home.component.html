@@ -1,0 +1,33 @@
+<div class="movies-list-container">
+  <div class="movies-header-container">
+    <div class="movies-header">MOVIES</div>
+  </div>
+  <div class="showing-coming-soon-options-container">
+    <div class="showing-coming-block">
+      <div id="nowShowing" class="now-showing">NOW SHOWING</div>
+      <div id="comingSoon" class="coming-soon">COMING SOON</div>
+    </div>
+  </div>
+  <div class="movie-list-container">
+    <div id="navigateLeft" class="navigate-container-left">
+      <i id="navigationIcon" class="material-icons">navigate_before</i>
+    </div>
+    <div class="movie-list">
+      <div id="movieSlide" class="movie-slide">
+        <div *ngFor="let movie of movieList" class="movie-container">
+          <div class="movie-image">
+            <img src="{{movie.movieImage}}" alt="">
+          </div>
+          <div class="movie-title-description-container">
+            <div class="movie-title">{{movie.movieName}}</div>
+            <div class="movie-description">{{movie.movieContent}}</div>
+          </div>
+          <div class="book-option">Book</div>
+        </div>
+      </div>
+    </div>
+    <div id="navigateRight" class="navigate-container-right">
+      <i id="navigationIcon" class="material-icons">navigate_next</i>
+    </div>
+  </div>
+</div>

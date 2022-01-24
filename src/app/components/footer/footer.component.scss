@@ -1,0 +1,149 @@
+.footer-body {
+  height: 85rem;
+  width: 81.2rem;
+  background-color: #3f3f3f;
+}
+
+.footer-icons {
+  height: 15rem;
+}
+
+.icons-container {
+  align-content: center;
+  display: flex;
+  padding: 50px 140px 20px 140px;
+  height: 10rem;
+}
+
+.icons {
+  cursor: pointer;
+  text-align: center;
+  height: 8rem;
+  border: 2px solid #757575;
+  width: 8rem;
+  border-radius: 50%;
+  margin: 0 36px 0 36px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 15px;
+  color: #757575;
+}
+
+.icons:hover {
+  color: #FFC342;
+  border: 2px solid #FFC342;
+  background-color: #FFC342;
+}
+
+.icons img {
+  margin: 30px 30px 40px 30px;
+  height: 70px;
+  width: 70px;
+}
+
+.sub-options-container-1 {
+  display: flex;
+  height: 28rem;
+  margin: 2rem 6rem 0 6rem;
+}
+
+.sub-option-container-1 {
+  height: 25rem;
+  width: 15rem;
+  margin: 20px 18px 0 18px;
+  text-align: center;
+}
+
+.sub-option-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 15px;
+  color: #ffff;
+  font-weight: 600;
+  margin: 60px 0 40px 0;
+  cursor: default;
+}
+
+.sub-option-container-1 p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  color: #ffff;
+  font-weight: 400;
+  cursor: pointer;
+  margin: 20px 0 20px 0;
+}
+
+.sub-option-container-1 p:hover {
+  color: #FFC342;
+}
+
+.sub-options-container-2 {
+  display: flex;
+  height: 22rem;
+  margin: 0 6rem 2rem 6rem;
+}
+
+.sub-option-container-2 {
+  height: 20rem;
+  width: 21rem;
+  margin: 20px 18px 0 18px;
+  text-align: center;
+}
+
+.sub-option-list-container {
+  height: 12rem;
+  display: flex;
+}
+
+.sub-option-list {
+  width: 10rem;
+  margin: 0 5px 0 5px;
+}
+
+.sub-option-list p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  color: #ffff;
+  font-weight: 400;
+  cursor: pointer;
+  margin: 20px 0 20px 0;
+}
+
+.sub-option-list p:hover {
+  color: #FFC342;
+}
+
+.copyright-container {
+  height: 8rem;
+  margin: 7rem 0 2rem 0;
+}
+
+.facebook-twitter-icons-container {
+  display: flex;
+  width: 7rem;
+  height: 3.5rem;
+  margin: 1rem 37.4rem 0 37.4rem;
+}
+
+.facebook-twitter-icons-container div {
+  width: 3rem;
+  margin: 5px 5px 5px 5px;
+}
+
+.facebook-twitter-icons-container div img {
+  width: 40px;
+  height: 40px;
+  margin: 2px 2px 2px 2px;
+  cursor: pointer;
+}
+
+.copyright-content {
+  cursor: default;
+  margin: 30px 2px 0 2px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 15px;
+  color: #c5c5c5;
+}
