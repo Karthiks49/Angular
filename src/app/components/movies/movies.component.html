@@ -1,0 +1,79 @@
+<div class="movies-list-container">
+  <div class="movies-header-container">
+    <div class="movies-header">MOVIES</div>
+  </div>
+  <div class="showing-coming-soon-options-container">
+    <div class="showing-coming-block">
+      <div id="nowShowing" class="now-showing">NOW SHOWING</div>
+      <div id="comingSoon" class="coming-soon">COMING SOON</div>
+    </div>
+  </div>
+  <div class="filter-movie-container">
+    <div class="filter-container">
+      <div class="filter-heading-container">
+        <div class="filter-heading">Filter By</div>
+        <div class="clear">clear</div>
+      </div>
+      <div class="filter-sub-container">
+        <div class="sub-heading-title">LANGUAGE</div>
+        <div class="sub-content">TAMIL</div>
+        <div class="sub-content">MALAYALAM</div>
+        <div class="sub-content">ENGLISH</div>
+        <div class="sub-content">TELUGU</div>
+        <div class="sub-content">HINDI</div>
+      </div>
+      <div class="filter-sub-container">
+        <div class="sub-heading-title">EXPERIENCE</div>
+        <div class="sub-content">2D</div>
+        <div class="sub-content">3D</div>
+      </div>
+      <div class="filter-sub-container">
+        <div class="sub-heading-title">GENRE</div>
+        <div class="sub-content">DRAMA</div>
+        <div class="sub-content">FAMILY</div>
+        <div class="sub-content">ROMANCE</div>
+        <div class="sub-content">MUSICAL</div>
+        <div class="sub-content">COMEDY</div>
+        <div class="sub-content">ROMANTIC</div>
+        <div class="sub-content">ACTION</div>
+        <div class="sub-content">THRILLER</div>
+        <div class="sub-content">SPORTS</div>
+        <div class="sub-content">BIOGRAPHY</div>
+        <div class="sub-content">HORROR</div>
+        <div class="sub-content">MYSTERY</div>
+        <div class="sub-content">FANTASY</div>
+        <div class="sub-content">ADVENTURE</div>
+        <div class="sub-content">SCI-FI</div>
+        <div class="sub-content">CRIME</div>
+      </div>
+    </div>
+    <div id="nowShowingMovies" class="now-showing-movies display-flex">
+      <div class="grid-container">
+        <div *ngFor="let movie of movieList" class="movie-container">
+          <div class="movie-image">
+            <img src="{{movie.movieImage}}" alt="">
+          </div>
+          <div class="movie-title-description-container">
+            <div class="movie-title">{{movie.movieName}}</div>
+            <div class="movie-description">{{movie.movieContent}}</div>
+          </div>
+          <div class="book-option">Book</div>
+        </div>
+      </div>
+    </div>
+    <div id="comingSoonMovies" class="coming-soon-movies display-none">
+      <div class="grid-container">
+        <div *ngFor="let movie of comingSoonMovies" class="movie-container">
+          <div class="movie-image">
+            <img src="{{movie.movieImage}}" alt="">
+          </div>
+          <div class="movie-title-description-container">
+            <div class="movie-title">{{movie.movieName}}</div>
+            <div class="movie-description">{{movie.movieContent}}</div>
+          </div>
+          <div class="book-option">Book</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

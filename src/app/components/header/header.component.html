@@ -9,11 +9,11 @@
     </div>
     </div>
     <div class="header-options-container">
-      <div id="1" class="header-option-focused">HOME</div>
-      <div id="2" class="header-option">MOVIES</div>
-      <div id="3" class="header-option">THEATRE</div>
-      <div id="4" class="header-option">EVENTS</div>
-      <div id="5" class="header-option">ORDERS</div>
+      <div [routerLink]="['home']" class="header-option">HOME</div>
+      <div [routerLink]="['movies']" class="header-option">MOVIES</div>
+      <div class="header-option">THEATRE</div>
+      <div class="header-option">EVENTS</div>
+      <div class="header-option">ORDERS</div>
     </div>
     <div class="login-container">
       <div class="profile-logo">

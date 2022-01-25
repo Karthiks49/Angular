@@ -10,16 +10,6 @@ export class HeaderComponent implements OnInit {
   constructor() {  }
 
   ngOnInit(): void {
-    // let header = document.getElementsByClassName("header-options-container")[0];
-    // header.addEventListener("click", function(event) {
-    //   for (let i = 0; i < header.classList.length; i++) {
-    //     if ((event.target.id == i) {
-    //     header.classList.remove("header-option");
-    //     header.classList.add("header-option-focused");
-        
-    //     }
-    //   }
-    // });
 
     let counter = 1;
     setInterval(function () {
@@ -29,7 +19,7 @@ export class HeaderComponent implements OnInit {
       if (counter > 5) {
         counter = 1;
       }
-    }, 9000);
+    }, 5000);
   }
 
 }
