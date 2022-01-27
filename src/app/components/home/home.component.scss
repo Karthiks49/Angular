@@ -48,6 +48,7 @@
   color: white;
   cursor: pointer;
   border-radius: 5px;
+  border:1px solid #2D2D2D;
 }
 
 .coming-soon {
@@ -59,6 +60,15 @@
   color: white;
   cursor: pointer;
   border-radius: 5px;
+  border:1px solid #2D2D2D;
+}
+
+.now-showing:hover {
+  border:1px solid #dddddd;
+}
+
+.coming-soon:hover {
+  border:1px solid #dddddd;
 }
 
 .active {
@@ -146,7 +156,7 @@
   height: 1.5rem;
   padding-top: 12px;
   padding-bottom: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto';
   font-size: 16px;
   line-height: 14px;
   font-weight: 600;

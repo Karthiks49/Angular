@@ -9,3 +9,9 @@ export interface comingSoonMovies {
   movieName: string;
   movieContent: string;
 }
+
+export interface theatreDetails {
+  theatreName : string;
+  theatreContent : any;
+}
+

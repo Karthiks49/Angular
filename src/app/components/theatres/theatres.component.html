@@ -1,0 +1,51 @@
+<div class="theatres-main-container">
+  <div class="theatres-header-container">
+    <div class="theatres-header">THEATRES</div>
+  </div>
+  <div class="filter-theatre-container">
+    <div class="filter-container">
+      <div class="filter-heading-container">
+        <div class="filter-heading">Filter By</div>
+        <div class="clear">clear</div>
+      </div>
+      <div class="filter-sub-container">
+        <div class="sub-heading-title">AMENITIES</div>
+        <div class="sub-content">F&B</div>
+        <div class="sub-content">Metro Train</div>
+        <div class="sub-content">Parking</div>
+        <div class="sub-content">Social Seating</div>
+      </div>
+      <div class="filter-sub-container">
+        <div class="sub-heading-title">EXPERIENCE</div>
+        <div class="sub-content">RGB Laser</div>
+        <div class="sub-content">Dolby Atmos</div>
+        <div class="sub-content">2K</div>
+        <div class="sub-content">4K</div>
+        <div class="sub-content">Dolby 7.1</div>
+        <div class="sub-content">Sofa</div>
+        <div class="sub-content">3D</div>
+      </div>
+
+    </div>
+    <div class="theatres-list-container">
+      <div *ngFor="let theatre of theatreDetails" class="theatre-main-container">
+        <div class="theatre-icon-container">
+          <div class="theatre-icon">
+            <img src="assets/images/home/theatres/theatreIcon.svg" alt="">
+          </div>
+        </div>
+        <div class="theatre-content-block">
+          <div class="theatre-name">{{theatre.theatreName}}</div>
+          <div class="theatre-location">Chennai</div>
+          <div class="amenities-experience">
+            <div *ngFor="let content of theatre.theatreContent" class="amentities-experience-sub-content">{{content}}</div>
+          </div>
+        </div>
+        <div class="book-container">
+          <div class="book-block">Book</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>      
