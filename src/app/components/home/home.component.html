@@ -4,33 +4,19 @@
   </div>
   <div class="showing-coming-soon-options-container">
     <div class="showing-coming-block">
-      <div id="nowShowing" class="now-showing">NOW SHOWING</div>
-      <div id="comingSoon" class="coming-soon">COMING SOON</div>
+      <div (click)="showNowShowing()" [ngClass]="{'active-showing': activeShowing}" class="now-showing">NOW SHOWING</div>
+      <div (click)="showComingSoon()" [ngClass]="{'active-soon': activeSoon}" class="coming-soon">COMING SOON</div>
     </div>
   </div>
   <div class="movie-list-container">
     <div id="navigateLeft" (click) ="scrollLeft()" class="navigate-container-left">
       <i id="navigationIcon" class="material-icons">navigate_before</i>
     </div>
-    <div id="nowShowingMovies" #widgetsContent class="now-showing-movies display-flex">
+    <div id="nowShowingMovies" #widgetsContent class="now-showing-movies">
       <div id="movieSlide"  class="movie-slide">
         <div *ngFor="let movie of movieList" class="movie-container">
           <div class="movie-image">
-            <img src="{{movie.movieImage}}" alt="">
-          </div>
-          <div class="movie-title-description-container">
-            <div class="movie-title">{{movie.movieName}}</div>
-            <div class="movie-description">{{movie.movieContent}}</div>
-          </div>
-          <div class="book-option">Book</div>
-        </div>
-      </div>
-    </div>
-    <div id="comingSoonMovies" #widgetsContent1 class="coming-soon-movies display-none">
-      <div id="movieSlide" class="movie-slide">
-        <div *ngFor="let movie of comingSoonMovies" class="movie-container">
-          <div class="movie-image">
-            <img src="{{movie.movieImage}}" alt="">
+            <img src="{{movie.movieImage}}">
           </div>
           <div class="movie-title-description-container">
             <div class="movie-title">{{movie.movieName}}</div>

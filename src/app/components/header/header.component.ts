@@ -5,6 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
+/**
+ * Gets lists of details and returns to required component. 
+ * 
+ * @author Karthik S
+ * @version 1.0
+ */
 export class HeaderComponent implements OnInit {
 
   constructor() {  }
@@ -21,5 +28,4 @@ export class HeaderComponent implements OnInit {
       }
     }, 5000);
   }
-
 }

@@ -7,6 +7,13 @@ import { theatreDetails } from 'src/app/movieInterface';
   templateUrl: './theatres.component.html',
   styleUrls: ['./theatres.component.scss']
 })
+
+/**
+ * Gets lists of details and returns to required component. 
+ * 
+ * @author Karthik S
+ * @version 1.0
+ */
 export class TheatresComponent implements OnInit {
 
   theatreDetails: theatreDetails[] = [];
@@ -16,5 +23,4 @@ export class TheatresComponent implements OnInit {
   ngOnInit(): void {
     this.theatreDetails = this.movieService.getTheatreList();
   }
-
 }

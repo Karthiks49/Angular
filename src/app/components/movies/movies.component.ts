@@ -8,6 +8,13 @@ import { MovieServiceService } from 'src/app/service/movie-service.service';
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.scss']
 })
+
+/**
+ * Gets lists of details and returns to required component. 
+ * 
+ * @author Karthik S
+ * @version 1.0
+ */
 export class MoviesComponent implements OnInit {
 
   movieList: movieDetails[] = [];
@@ -16,33 +23,28 @@ export class MoviesComponent implements OnInit {
   constructor(private movieService: MovieServiceService) { 
   }
 
-  ngOnInit(): void {
+  activeShowing: boolean = true;
+  activeSoon: boolean = false;
 
+  /**
+   * Gets now showing movies list.
+   */ 
+  showNowShowing() {
     this.movieList = this.movieService.getMovieList();
-    this.comingSoonMovies = this.movieService.getComingSoonMovies();
-
-    let nowShowingMovies = document.getElementById("nowShowingMovies");
-    let comingSoonMovies = document.getElementById("comingSoonMovies");
-
-    let nowShowing = document.getElementById("nowShowing");
-    nowShowing?.classList.add("active");
-    let comingSoon  = document.getElementById("comingSoon");
-    comingSoon?.addEventListener("click", function() {
-      nowShowing?.classList.remove("active");
-      comingSoon?.classList.add("active");
-      nowShowingMovies?.classList.remove("display-flex");
-      nowShowingMovies?.classList.add("display-none");
-      comingSoonMovies?.classList.remove("display-none");
-      comingSoonMovies?.classList.add("display-flex");
-    });
-    nowShowing?.addEventListener("click", function() {
-      comingSoon?.classList.remove("active");
-      nowShowing?.classList.add("active");
-      nowShowingMovies?.classList.remove("display-none");
-      nowShowingMovies?.classList.add("display-flex");
-      comingSoonMovies?.classList.remove("display-flex");
-      comingSoonMovies?.classList.add("display-none");
-    });
+    this.activeShowing = true;
+    this.activeSoon = false;
   }
 
+  /**
+   * Gets coming soon movies list.
+   */    
+  showComingSoon() {
+    this.movieList = this.movieService.getComingSoonMovies();
+    this.activeShowing = false;
+    this.activeSoon = true;
+  }
+
+  ngOnInit(): void {
+    this.movieList = this.movieService.getMovieList();
+  }
 }

@@ -71,7 +71,13 @@
   border:1px solid #dddddd;
 }
 
-.active {
+.active-showing {
+  background-color: white;
+  border: 1px solid #dddddd;
+  color: #2D2D2D;
+}
+
+.active-soon {
   background-color: white;
   border: 1px solid #dddddd;
   color: #2D2D2D;
@@ -94,14 +100,6 @@
 .coming-soon-movies {
   margin: 15px 15px 15px 15px;
   width: 60rem;
-}
-
-.display-flex {
-  display: flex;
-}
-
-.display-none {
-  display: none;
 }
 
 .filter-heading-container {

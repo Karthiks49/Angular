@@ -12,6 +12,6 @@ export interface comingSoonMovies {
 
 export interface theatreDetails {
   theatreName : string;
-  theatreContent : any;
+  theatreContent : string[];
 }
 

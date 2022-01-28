@@ -71,7 +71,13 @@
   border:1px solid #dddddd;
 }
 
-.active {
+.active-showing {
+  background-color: white;
+  border: 1px solid #dddddd;
+  color: #2D2D2D;
+}
+
+.active-soon {
   background-color: white;
   border: 1px solid #dddddd;
   color: #2D2D2D;
@@ -104,21 +110,9 @@
 }
 
 .now-showing-movies {
-  overflow: hidden;
-  width: 69.5rem;
-}
-
-.coming-soon-movies {
-  overflow: hidden;
-  width: 69.5rem;
-}
-
-.display-flex {
   display: flex;
-}
-
-.display-none {
-  display: none;
+  overflow: hidden;
+  width: 69.5rem;
 }
 
 .movie-slide {

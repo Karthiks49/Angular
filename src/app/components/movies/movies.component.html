@@ -4,8 +4,8 @@
   </div>
   <div class="showing-coming-soon-options-container">
     <div class="showing-coming-block">
-      <div id="nowShowing" class="now-showing">NOW SHOWING</div>
-      <div id="comingSoon" class="coming-soon">COMING SOON</div>
+      <div (click)="showNowShowing()" [ngClass]="{'active-showing': activeShowing}" class="now-showing">NOW SHOWING</div>
+      <div (click)="showComingSoon()" [ngClass]="{'active-soon': activeSoon}" class="coming-soon">COMING SOON</div>
     </div>
   </div>
   <div class="filter-movie-container">
@@ -47,23 +47,9 @@
         <div class="sub-content">CRIME</div>
       </div>
     </div>
-    <div id="nowShowingMovies" class="now-showing-movies display-flex">
+    <div id="nowShowingMovies" class="now-showing-movies">
       <div class="grid-container">
         <div *ngFor="let movie of movieList" class="movie-container">
-          <div class="movie-image">
-            <img src="{{movie.movieImage}}" alt="">
-          </div>
-          <div class="movie-title-description-container">
-            <div class="movie-title">{{movie.movieName}}</div>
-            <div class="movie-description">{{movie.movieContent}}</div>
-          </div>
-          <div class="book-option">Book</div>
-        </div>
-      </div>
-    </div>
-    <div id="comingSoonMovies" class="coming-soon-movies display-none">
-      <div class="grid-container">
-        <div *ngFor="let movie of comingSoonMovies" class="movie-container">
           <div class="movie-image">
             <img src="{{movie.movieImage}}" alt="">
           </div>

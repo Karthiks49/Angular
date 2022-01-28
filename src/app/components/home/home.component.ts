@@ -8,6 +8,13 @@ import { MovieServiceService } from 'src/app/service/movie-service.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
+/**
+ * Gets lists of details and returns to required component. 
+ * 
+ * @author Karthik S
+ * @version 1.0
+ */
 export class HomeComponent implements OnInit {
 
   movieList: movieDetails[] = [];
@@ -22,42 +29,44 @@ export class HomeComponent implements OnInit {
   @ViewChild('widgetsContent1')
   widgetsContent1!: ElementRef;
 
-  scrollLeft(){
+  /**
+   * Scrolls the element to left side in the given value.
+   */
+  scrollLeft(): void{
     this.widgetsContent.nativeElement.scrollLeft -= 278;
     this.widgetsContent1.nativeElement.scrollLeft -= 278;
   }
 
-  scrollRight(){
+  /**
+   * Scrolls the element to right side in the given value.
+   */  
+  scrollRight() : void{
     this.widgetsContent.nativeElement.scrollLeft += 278;
     this.widgetsContent1.nativeElement.scrollLeft += 278;
   }
 
-  ngOnInit(): void {
+  activeShowing: boolean = true;
+  activeSoon: boolean = false;
 
+  /**
+   * Gets now showing movies list.
+   */
+  showNowShowing() : void{
     this.movieList = this.movieService.getMovieList();
-    this.comingSoonMovies = this.movieService.getComingSoonMovies();
+    this.activeShowing = true;
+    this.activeSoon = false;
+  }
 
-    let nowShowingMovies = document.getElementById("nowShowingMovies");
-    let comingSoonMovies = document.getElementById("comingSoonMovies");
-
-    let nowShowing = document.getElementById("nowShowing");
-    nowShowing?.classList.add("active");
-    let comingSoon  = document.getElementById("comingSoon");
-    comingSoon?.addEventListener("click", function() {
-      nowShowing?.classList.remove("active");
-      comingSoon?.classList.add("active");
-      nowShowingMovies?.classList.remove("display-flex");
-      nowShowingMovies?.classList.add("display-none");
-      comingSoonMovies?.classList.remove("display-none");
-      comingSoonMovies?.classList.add("display-flex");
-    });
-    nowShowing?.addEventListener("click", function() {
-      comingSoon?.classList.remove("active");
-      nowShowing?.classList.add("active");
-      nowShowingMovies?.classList.remove("display-none");
-      nowShowingMovies?.classList.add("display-flex");
-      comingSoonMovies?.classList.remove("display-flex");
-      comingSoonMovies?.classList.add("display-none");
-    });
+  /**
+   * Gets coming soon movies list.
+   */  
+  showComingSoon() : void{
+    this.movieList = this.movieService.getComingSoonMovies();
+    this.activeShowing = false;
+    this.activeSoon = true;
+  }
+  
+  ngOnInit(): void {
+    this.movieList = this.movieService.getMovieList();
   }
 }
