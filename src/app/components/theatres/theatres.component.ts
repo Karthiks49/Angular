@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieServiceService } from 'src/app/service/movie-service.service';
-import { theatreDetails } from 'src/app/movieInterface';
+import { theatreDetails, theatresFilterDetails } from 'src/app/movieInterface';
 
 @Component({
   selector: 'app-theatres',
@@ -17,10 +17,12 @@ import { theatreDetails } from 'src/app/movieInterface';
 export class TheatresComponent implements OnInit {
 
   theatreDetails: theatreDetails[] = [];
+  theatresFilter : theatresFilterDetails[] = []; 
 
   constructor(private movieService: MovieServiceService) { }
 
   ngOnInit(): void {
     this.theatreDetails = this.movieService.getTheatreList();
+    this.theatresFilter = this.movieService.getTheatresFilterList();
   }
 }

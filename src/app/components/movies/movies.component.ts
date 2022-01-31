@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { movieDetails } from 'src/app/movieInterface';
-import { comingSoonMovies } from 'src/app/movieInterface';
+import { movieDetails, comingSoonMovies, moviesFilterDetails } from 'src/app/movieInterface';
 import { MovieServiceService } from 'src/app/service/movie-service.service';
 
 @Component({
@@ -9,22 +8,21 @@ import { MovieServiceService } from 'src/app/service/movie-service.service';
   styleUrls: ['./movies.component.scss']
 })
 
-/**
- * Gets lists of details and returns to required component. 
- * 
- * @author Karthik S
- * @version 1.0
- */
 export class MoviesComponent implements OnInit {
-
-  movieList: movieDetails[] = [];
-  comingSoonMovies : comingSoonMovies[] = [];
-
-  constructor(private movieService: MovieServiceService) { 
-  }
 
   activeShowing: boolean = true;
   activeSoon: boolean = false;
+
+  movieList: movieDetails[] = [];
+  comingSoonMovies : comingSoonMovies[] = [];
+  moviesFilter : moviesFilterDetails[] = [];
+
+  constructor(private movieService: MovieServiceService) { }
+
+  ngOnInit(): void {
+    this.movieList = this.movieService.getMovieList();
+    this.moviesFilter = this.movieService.getMoviesFilterList();
+  }
 
   /**
    * Gets now showing movies list.
@@ -42,9 +40,5 @@ export class MoviesComponent implements OnInit {
     this.movieList = this.movieService.getComingSoonMovies();
     this.activeShowing = false;
     this.activeSoon = true;
-  }
-
-  ngOnInit(): void {
-    this.movieList = this.movieService.getMovieList();
   }
 }

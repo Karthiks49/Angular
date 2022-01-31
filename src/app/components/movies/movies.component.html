@@ -14,37 +14,9 @@
         <div class="filter-heading">Filter By</div>
         <div class="clear">clear</div>
       </div>
-      <div class="filter-sub-container">
-        <div class="sub-heading-title">LANGUAGE</div>
-        <div class="sub-content">TAMIL</div>
-        <div class="sub-content">MALAYALAM</div>
-        <div class="sub-content">ENGLISH</div>
-        <div class="sub-content">TELUGU</div>
-        <div class="sub-content">HINDI</div>
-      </div>
-      <div class="filter-sub-container">
-        <div class="sub-heading-title">EXPERIENCE</div>
-        <div class="sub-content">2D</div>
-        <div class="sub-content">3D</div>
-      </div>
-      <div class="filter-sub-container">
-        <div class="sub-heading-title">GENRE</div>
-        <div class="sub-content">DRAMA</div>
-        <div class="sub-content">FAMILY</div>
-        <div class="sub-content">ROMANCE</div>
-        <div class="sub-content">MUSICAL</div>
-        <div class="sub-content">COMEDY</div>
-        <div class="sub-content">ROMANTIC</div>
-        <div class="sub-content">ACTION</div>
-        <div class="sub-content">THRILLER</div>
-        <div class="sub-content">SPORTS</div>
-        <div class="sub-content">BIOGRAPHY</div>
-        <div class="sub-content">HORROR</div>
-        <div class="sub-content">MYSTERY</div>
-        <div class="sub-content">FANTASY</div>
-        <div class="sub-content">ADVENTURE</div>
-        <div class="sub-content">SCI-FI</div>
-        <div class="sub-content">CRIME</div>
+      <div *ngFor="let movieFilter of moviesFilter" class="filter-sub-container">
+        <div class="sub-heading-title">{{movieFilter.heading}}</div>
+        <div *ngFor="let content of movieFilter.content" class="sub-content">{{content}}</div>
       </div>
     </div>
     <div id="nowShowingMovies" class="now-showing-movies">

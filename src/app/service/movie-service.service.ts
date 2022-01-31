@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { movieList, comingSoonMoviesList, theatreDetailList } from '../list';
+import { movieList, comingSoonMoviesList, theatreDetailList, moviesFilterList, theatresFilterList } from '../list';
 
 @Injectable({
   providedIn: 'root'
@@ -40,5 +40,23 @@ export class MovieServiceService {
    */  
   getTheatreList() {
     return theatreDetailList;
+  }
+
+  /**
+   * Gets movies filter details.
+   * 
+   * @returns {moviesFilterDetails[]} list of movies filter details.
+   */    
+  getMoviesFilterList() {
+    return moviesFilterList;
+  }
+
+  /**
+   * Gets theatres filter details.
+   * 
+   * @returns {theatresFilterDetails[]} list of theatres filter details.
+   */    
+  getTheatresFilterList() {
+    return theatresFilterList;
   }
 }

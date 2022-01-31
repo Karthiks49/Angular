@@ -15,3 +15,12 @@ export interface theatreDetails {
   theatreContent : string[];
 }
 
+export interface moviesFilterDetails {
+  heading : string;
+  content : string[];
+}
+
+export interface theatresFilterDetails {
+  heading : string;
+  content : string[];
+}

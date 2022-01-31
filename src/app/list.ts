@@ -1,4 +1,4 @@
-import { movieDetails, comingSoonMovies, theatreDetails } from "./movieInterface";
+import { movieDetails, comingSoonMovies, theatreDetails, moviesFilterDetails, theatresFilterDetails } from "./movieInterface";
 
 export const movieList: movieDetails[] = [
   {
@@ -183,4 +183,32 @@ export const theatreDetailList : theatreDetails[] = [
     theatreName: "Ags Cinemas Maduravoyal",
     theatreContent : ["Social Seating", "4K", "Dolby Atmos"]
   }
+]
+
+export const moviesFilterList : moviesFilterDetails[] = [
+  {
+    heading : "LANGUAGE",
+    content : ["TAMIL", "MALAYALAM", "ENGLISH", "TELUGU", "HINDI"]
+  },
+  {
+    heading : "EXPERIENCE",
+    content : ["2D", "3D"]
+  },
+  {
+    heading : "GENRE",
+    content : ["DRAMA", "FAMILY", "ROMANCE", "MUSICAL", "COMEDY", "ROMANTIC",
+               "ACTION", "THRILLER", "SPORTS", "BIOGRAPHY", "HORROR", "MYSTERY",
+               "FANTASY", "ADVENTURE", "SCI-FI", "CRIME"]
+  }
+]
+
+export const theatresFilterList : theatresFilterDetails[] = [
+  {
+    heading : "AMENITIES",
+    content : ["F&B", "Metro Train", "Parking", "Social Seating"]
+  },
+  {
+    heading : "EXPERIENCE",
+    content : ["RGB Laser", "Dolby Atmos", "2K", "4K", "Dolby 7.1", "Sofa", "3D"]
+  } 
 ]

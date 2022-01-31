@@ -9,26 +9,24 @@ import { MovieServiceService } from 'src/app/service/movie-service.service';
   styleUrls: ['./home.component.scss']
 })
 
-/**
- * Gets lists of details and returns to required component. 
- * 
- * @author Karthik S
- * @version 1.0
- */
 export class HomeComponent implements OnInit {
 
-  movieList: movieDetails[] = [];
-  comingSoonMovies : comingSoonMovies[] = [];
-
-  constructor(private movieService: MovieServiceService) { 
-  }
-  
   @ViewChild('widgetsContent')
   widgetsContent!: ElementRef;
 
   @ViewChild('widgetsContent1')
   widgetsContent1!: ElementRef;
 
+  movieList: movieDetails[] = [];
+  comingSoonMovies : comingSoonMovies[] = [];
+
+  constructor(private movieService: MovieServiceService) { 
+  }
+
+  ngOnInit(): void {
+    this.movieList = this.movieService.getMovieList();
+  }
+  
   /**
    * Scrolls the element to left side in the given value.
    */
@@ -64,9 +62,5 @@ export class HomeComponent implements OnInit {
     this.movieList = this.movieService.getComingSoonMovies();
     this.activeShowing = false;
     this.activeSoon = true;
-  }
-  
-  ngOnInit(): void {
-    this.movieList = this.movieService.getMovieList();
   }
 }

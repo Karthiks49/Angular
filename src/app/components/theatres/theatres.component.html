@@ -8,22 +8,9 @@
         <div class="filter-heading">Filter By</div>
         <div class="clear">clear</div>
       </div>
-      <div class="filter-sub-container">
-        <div class="sub-heading-title">AMENITIES</div>
-        <div class="sub-content">F&B</div>
-        <div class="sub-content">Metro Train</div>
-        <div class="sub-content">Parking</div>
-        <div class="sub-content">Social Seating</div>
-      </div>
-      <div class="filter-sub-container">
-        <div class="sub-heading-title">EXPERIENCE</div>
-        <div class="sub-content">RGB Laser</div>
-        <div class="sub-content">Dolby Atmos</div>
-        <div class="sub-content">2K</div>
-        <div class="sub-content">4K</div>
-        <div class="sub-content">Dolby 7.1</div>
-        <div class="sub-content">Sofa</div>
-        <div class="sub-content">3D</div>
+      <div *ngFor="let theatreFilter of theatresFilter" class="filter-sub-container">
+        <div class="sub-heading-title">{{theatreFilter.heading}}</div>
+        <div *ngFor="let content of theatreFilter.content" class="sub-content">{{content}}</div>
       </div>
     </div>
     <div class="theatres-list-container">
