@@ -1,3 +1,4 @@
+<app-slider></app-slider>
 <div class="movies-list-container">
   <div class="movies-header-container">
     <div class="movies-header">MOVIES</div>
@@ -14,7 +15,7 @@
     </div>
     <div id="nowShowingMovies" #widgetsContent class="now-showing-movies">
       <div id="movieSlide"  class="movie-slide">
-        <div *ngFor="let movie of movieList" class="movie-container">
+        <div [routerLink]="['movieBooking', movie.movieName]" *ngFor="let movie of movieList" class="movie-container">
           <div class="movie-image">
             <img src="{{movie.movieImage}}">
           </div>

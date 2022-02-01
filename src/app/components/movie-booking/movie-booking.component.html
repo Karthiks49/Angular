@@ -1,0 +1,27 @@
+<div class="movie-booking-body">
+  <div class="movie-details-body">
+    <div class="movie-poster">
+      <img src="{{movie.poster}}" alt="">
+    </div>
+    <div class="movie-details">
+      <h2>{{movie.title}}</h2>
+      <div class="language-certificate">
+        <h5>{{movie.language}}</h5>
+      </div>
+      <div class="genre-duration">
+        <span *ngFor="let genre of movie.genreAndDuration">{{genre}}</span>
+      </div>
+      <div class="actors-dir-music">
+        <p>Actors: 
+          <span *ngFor="let actor of movie.actors">{{actor}}</span>
+        </p>
+        <p>Director: {{movie.director}}</p>
+        <p>Music Director: {{movie.musicDirector}}</p>
+      </div>
+      <div class="synopsis">
+        <h5>SYNOPSIS</h5>
+        <p>{{movie.synopsis}}</p>
+      </div>
+    </div>
+  </div>
+</div>

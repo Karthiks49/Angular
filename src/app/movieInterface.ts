@@ -24,3 +24,14 @@ export interface theatresFilterDetails {
   heading : string;
   content : string[];
 }
+
+export interface movieInfo {
+  title: string;
+  poster: string;
+  language: string;
+  genreAndDuration: string[];
+  actors: string[];
+  director: string;
+  musicDirector: string;
+  synopsis: string;
+}

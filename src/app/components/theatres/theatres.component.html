@@ -1,3 +1,4 @@
+<app-slider></app-slider>
 <div class="theatres-main-container">
   <div class="theatres-header-container">
     <div class="theatres-header">THEATRES</div>
@@ -10,7 +11,7 @@
       </div>
       <div *ngFor="let theatreFilter of theatresFilter" class="filter-sub-container">
         <div class="sub-heading-title">{{theatreFilter.heading}}</div>
-        <div *ngFor="let content of theatreFilter.content" class="sub-content">{{content}}</div>
+        <p *ngFor="let content of theatreFilter.content" class="sub-content">{{content}}</p>
       </div>
     </div>
     <div class="theatres-list-container">
@@ -24,7 +25,7 @@
           <div class="theatre-name">{{theatre.theatreName}}</div>
           <div class="theatre-location">Chennai</div>
           <div class="amenities-experience">
-            <div *ngFor="let content of theatre.theatreContent" class="amentities-experience-sub-content">{{content}}</div>
+            <span *ngFor="let content of theatre.theatreContent" class="amentities-experience-sub-content">{{content}}</span>
           </div>
         </div>
         <div class="book-container">

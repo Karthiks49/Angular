@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { movieList, comingSoonMoviesList, theatreDetailList, moviesFilterList, theatresFilterList } from '../list';
+import { movieList, comingSoonMoviesList, theatreDetailList, moviesFilterList, theatresFilterList, moviesInformation } from '../list';
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +14,13 @@ import { movieList, comingSoonMoviesList, theatreDetailList, moviesFilterList, t
 export class MovieServiceService {
 
   constructor() { }
-  
+
   /**
    * Gets now showing movie details.
    * 
    * @returns {movieDetails[]} list of showing movie details.
    */
-  getMovieList() {
+  public getMovieList() {
     return movieList;
   }
 
@@ -29,7 +29,7 @@ export class MovieServiceService {
    * 
    * @returns {comingSoonMovies[]} list of coming soon movie details.
    */
-  getComingSoonMovies() {
+  public getComingSoonMovies() {
     return comingSoonMoviesList;
   }
 
@@ -37,8 +37,8 @@ export class MovieServiceService {
    * Gets theatre details.
    * 
    * @returns {theatreDetails[]} list of theatre details.
-   */  
-  getTheatreList() {
+   */
+  public getTheatreList() {
     return theatreDetailList;
   }
 
@@ -46,8 +46,8 @@ export class MovieServiceService {
    * Gets movies filter details.
    * 
    * @returns {moviesFilterDetails[]} list of movies filter details.
-   */    
-  getMoviesFilterList() {
+   */
+  public getMoviesFilterList() {
     return moviesFilterList;
   }
 
@@ -55,8 +55,13 @@ export class MovieServiceService {
    * Gets theatres filter details.
    * 
    * @returns {theatresFilterDetails[]} list of theatres filter details.
-   */    
-  getTheatresFilterList() {
+   */
+  public getTheatresFilterList() {
     return theatresFilterList;
+  }
+
+
+  public getMoviesInfo(title: string): any {
+    return moviesInformation.find(p => p.title == title);
   }
 }
